@@ -1,0 +1,141 @@
+@import './font.less';
+body{
+  padding: 0;
+  margin: 0;
+  div{
+    box-sizing: border-box;
+  }
+}
+.di{
+  // 当分辨率是150像素/英寸时，A4纸像素长宽分别是1754×1240；
+  width: 1240px;
+  height: 1754px;
+  background-color: #fff;
+  background: url('../image/top-banner.png'), url('../image//logo.png');
+  background-repeat: no-repeat;
+  background-position:0 0, 102px 168px ;
+  background-size: 100%, 192px;
+  // overflow: hidden;
+  position: absolute;
+  &-empty{
+    width: 440px;
+    height: 134px;
+    margin: 0 auto;
+    margin-top: 125px;
+    border: 1px solid #fff;
+    >span{
+      font-size: 100px;
+      line-height: 134px;
+      color: #fff;
+    }
+  }
+  &-title{
+    text-align: center;
+    >div{
+      margin-top: 20px;
+      &:first-child{
+        font-size: 46px;
+      }
+      &:last-child{
+        margin-top: 24px;
+        font-size: 18px;
+      }
+    }
+  }
+  &-user{
+    text-align: center;
+    margin-top: 55px;
+    font-size: 16px;
+    >span{
+      margin-left: 15px;
+      margin-right: 4px;
+    }
+  }
+  &-collect{
+    padding: 50px 89px;
+    padding-bottom: 0;
+    &__item{
+      box-sizing: border-box;
+      display: inline-block;
+      margin: 8px 0;
+      width: 345px;
+      &:nth-child(2n){
+        width: calc(100% - 400px);
+      }
+      &:before{
+        box-sizing: border-box;
+        content: '';
+        display: inline-block;
+        width: 4px;
+        height: 12px;
+        background: #000;
+        margin-right: 6px;
+      }
+    }
+  }
+  &-table{
+    padding-top: 16px;
+    padding-left: 89px;
+    padding-right: 68px;
+    @boderColor: #d0d0d0;
+    >table{
+      width: 100%;
+      border-spacing: 0;
+      border: 1px solid @boderColor;
+      thead{
+        th{
+          font-size: 17px;
+          text-align: center;
+          background: #666;
+          height: 85px;
+          border-left: 0.5px solid @boderColor;
+          &:first-child{
+            border-left: none;
+          }
+        }
+        .dline{
+          line-height: 1.1;
+        }
+      }
+      tbody{
+        td{
+          font-size: 14px;
+          text-align: center;
+          height: 64px;
+          border-top: 0.5px solid @boderColor;
+        }
+        tr{
+          &:nth-child(2n){
+            background: #f0f0f0;
+          }
+        }
+      }
+    }
+  }
+  &-page{
+    position: absolute;
+    right: 100px;
+    bottom: 44px;
+  }
+
+  .fc0 {
+    color: rgb(255, 255, 255);
+  }
+  .fc1 {
+    color: rgb(0, 0, 0);
+  }
+  .fc2 {
+    color: rgb(48, 48, 48);
+  }
+  .fc3 {
+    color: rgb(208, 208, 208);
+  }
+  .fc4 {
+    color: rgb(242, 242, 242);
+  }
+  .fc5 {
+    color: rgb(116, 116, 116);
+  }
+
+
+}

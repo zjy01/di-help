@@ -1,0 +1,13 @@
+.idea/
+node_modules/
+*.iml
+npm-debug.log
+npm-debug.log.*
+.DS_Store
+stats.json
+yarn-error.log
+eslint/*
+.eslintcache
+**/logs
+**/*.swp
+.vscode
