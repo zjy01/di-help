@@ -2,9 +2,7 @@
     .di{
         page-break-before: avoid;
         page-break-inside: avoid;
-
-  break-inside: avoid;
-        background: red;
+        break-inside: avoid;
     }
     @page {
         margin: 0
