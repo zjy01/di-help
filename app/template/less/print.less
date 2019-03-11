@@ -1,0 +1,24 @@
+@media print {
+    .di{
+        page-break-before: avoid;
+        page-break-inside: avoid;
+
+  break-inside: avoid;
+        background: red;
+    }
+    @page {
+        margin: 0
+    }
+
+    html {
+        margin: 0
+    }
+
+    body {
+        margin: 0;
+        -webkit-print-color-adjust: exact
+    }
+ }
+ @page{
+    size: A4;
+ }
