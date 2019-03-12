@@ -36,7 +36,9 @@ body {
   background-position: 0 0, 204px 336px;
   background-size: 100%, 384px;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  word-spacing: 0;
+  letter-spacing: 0; }
   .di-empty {
     width: 880px;
     height: 268px;
@@ -52,26 +54,33 @@ body {
     .di-title > div {
       margin-top: 40px; }
       .di-title > div:first-child {
-        font-size: 92px; }
+        font-size: 95px;
+        letter-spacing: 1px;
+        text-indent: -8px; }
       .di-title > div:last-child {
-        margin-top: 48px;
-        font-size: 36px; }
+        margin-top: 42px;
+        font-size: 37px;
+        letter-spacing: 0.2px;
+        text-indent: 16px; }
   .di-user {
     text-align: center;
-    margin-top: 110px;
-    font-size: 32px; }
+    margin-top: 108px;
+    font-size: 34px;
+    text-indent: 45px; }
     .di-user > span {
-      margin-left: 30px;
-      margin-right: 8px; }
+      margin-left: 22px;
+      margin-right: 26px;
+      font-size: 33.2px; }
   .di-collect {
-    padding: 100px 178px;
+    padding: 99px 178px;
     padding-bottom: 0;
-    font-size: 32px; }
+    font-size: 33px;
+    letter-spacing: 0.2px; }
     .di-collect__item {
       box-sizing: border-box;
       display: inline-block;
-      margin: 16px 0;
-      width: 690px; }
+      margin: 17px 0;
+      width: 678px; }
       .di-collect__item:nth-child(2n) {
         width: 1200px; }
       .di-collect__item:before {
@@ -81,40 +90,51 @@ body {
         width: 8px;
         height: 24px;
         background: #000;
-        margin-right: 12px; }
+        margin-right: 12px;
+        position: relative;
+        top: -2px; }
   .di-table {
-    padding-top: 32px;
-    padding-left: 178px;
-    padding-right: 136px; }
+    padding-top: 17px;
+    padding-left: 177px;
+    padding-right: 135px;
+    letter-spacing: 0.2px; }
     .di-table > table {
       width: 100%;
       border-spacing: 0;
-      border: 2px solid #d0d0d0;
+      border: 3px solid #d0d0d0;
       table-layout: fixed; }
       .di-table > table thead th {
-        font-size: 34px;
+        font-size: 35px;
         text-align: center;
         background: #666;
-        height: 170px;
-        border-left: 1px solid #d0d0d0; }
+        color: #f2f2f2;
+        height: 168px;
+        border-left: 1px solid #d0d0d0;
+        padding-top: 15px;
+        text-indent: -5px;
+        font-weight: lighter; }
         .di-table > table thead th:first-child {
           border-left: none; }
       .di-table > table thead .dline {
-        line-height: 1.1; }
+        text-indent: 7px;
+        line-height: 1.08; }
       .di-table > table tbody td {
-        font-size: 28px;
+        font-size: 29px;
         text-align: center;
-        height: 128px;
-        border-top: 2px solid #d0d0d0;
+        height: 129px;
+        border-top: 3px solid #d0d0d0;
         text-overflow: ellipsis;
         white-space: nowrap;
-        overflow: hidden; }
+        overflow: hidden;
+        padding-top: 15px;
+        text-indent: -4px; }
       .di-table > table tbody tr:nth-child(2n) {
         background: #f0f0f0; }
   .di-page {
     position: absolute;
     right: 200px;
-    bottom: 88px; }
+    bottom: 178px;
+    letter-spacing: 0.8px; }
   .di .fc0 {
     color: white; }
   .di .fc1 {
