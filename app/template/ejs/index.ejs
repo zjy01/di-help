@@ -13,10 +13,22 @@
       <span class="ff1">-</span>
     </div>
     <%- include('header'); -%>
-    <%- include('table'); -%>
+    <%- include('table', {data: data[0],start:1 }); -%>
     <div class="di-page ff2">
-    页码：2/5
+    页码：1/<%= data.length %>
     </div>
   </div>
+  <% const dataRest = data.slice(1); dataRest.map((item, index) => {%>
+  <div class="di">
+    <div class="di-empty">
+      <span class="ff1">-</span>
+    </div>
+    <div class="empty-box"></div>
+    <%- include('table', {data: item, start: 13 + 16 * index }); -%>
+    <div class="di-page ff2">
+    页码：<%= index+2%>/<%= data.length %>
+    </div>
+  </div>
+  <%})%>
 </body>
 </html>

@@ -3,6 +3,11 @@
         page-break-before: avoid;
         page-break-inside: avoid;
         break-inside: avoid;
+        &-table{
+            page-break-before: avoid;
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
     }
     @page {
         margin: 0
