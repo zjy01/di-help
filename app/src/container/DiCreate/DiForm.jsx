@@ -34,6 +34,10 @@ class DiForm extends React.Component {
       md: 6,
       xs: 12,
     }
+    const thirdLayout = {
+      md: 8,
+      xs: 12,
+    }
     return (
       <Form layout="inline" onSubmit={this.handleSubmit}>
         <Row>
@@ -41,31 +45,61 @@ class DiForm extends React.Component {
             <Item.FormInput
               label="车型"
               prop="car"
-              extra="快车、出租车"
+              placeholder="快车、出租车"
             />
           </Col>
           <Col {...firtyLayout}>
             <Item.FormInput
               label="城市"
               prop="city"
-              extra="所在城市"
+              placeholder="所在城市"
             />
           </Col>
           <Col {...firtyLayout}>
             <Item.FormInput
               label="起点"
               prop="start"
-              extra="一般是居住地"
+              placeholder="一般是居住地"
             />
           </Col>
           <Col {...firtyLayout}>
             <Item.FormInput
               label="终点"
               prop="end"
-              extra="一般是办公点"
+              placeholder="一般是办公点"
             />
           </Col>
           <Col {...firtyLayout}>
+            <Item.FormInput
+              placeholder="请输入单次大约里程"
+              label="里程"
+              prop="duration"
+            />
+          </Col>
+          <Col {...firtyLayout}>
+            <Item.FormInput
+              placeholder="里程偏差值"
+              label="偏差值"
+              prop="durationAround"
+            />
+          </Col>
+          <Col {...firtyLayout}>
+            <Item.FormInput
+              placeholder="请输入单次大约金额"
+              label="金额"
+              prop="money"
+            />
+          </Col>
+          <Col {...firtyLayout}>
+            <Item.FormInput
+              placeholder="金额偏差值"
+              label="偏差值"
+              prop="moneyAround"
+            />
+          </Col>
+        </Row>
+        <Row>
+        <Col {...firtyLayout}>
             <Item.FormTimePicker
               format={'HH:mm'}
               label="上班时间"
@@ -76,9 +110,16 @@ class DiForm extends React.Component {
           <Col {...firtyLayout}>
             <Item.FormTimePicker
               format={'HH:mm'}
-              label="下班班时间"
+              label="下班时间"
               prop="endTime"
               extra="终点回程搭车时间"
+            />
+          </Col>
+          <Col span={12}>
+            <Item.FormRangePicker
+                label="里程周期"
+                prop="cycle"
+                extra="里程记录的周期"
             />
           </Col>
         </Row>
