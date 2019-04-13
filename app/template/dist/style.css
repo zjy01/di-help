@@ -104,7 +104,7 @@ body {
     .di-table > table {
       width: 100%;
       border-spacing: 0;
-      border: 1.41px solid #d0d0d0;
+      box-shadow: #d0d0d0 0 0 0 1px;
       table-layout: fixed; }
       .di-table > table thead th {
         font-size: 16.45px;
@@ -116,19 +116,6 @@ body {
         text-indent: -2.35px;
         font-weight: lighter;
         position: relative; }
-        .di-table > table thead th:first-child {
-          border-left: none; }
-        .di-table > table thead th:after {
-          content: '';
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 200%;
-          width: 200%;
-          transform-origin: 0 0;
-          transform: scale(0.47);
-          border-left: 1px solid #d0d0d0; }
       .di-table > table thead .dline {
         text-indent: 3.29px;
         line-height: 1.08; }

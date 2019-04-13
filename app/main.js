@@ -33,15 +33,23 @@ app.on('activate', function () {
 })
 
 ipcMain.on('print', function () {
-  const datas =  new Array(30).fill({
+  const datas = [{
     car: '快车',
-    time: '01-06 18:27 周六',
-    city: '广州市',
-    start: '凤池农贸市场西侧',
-    end: '微八连锁酒店(西朗地铁站店)',
-    duration: '6.2',
-    money: '24.59'
-  });
+    time: '04-07 15:17 周日',
+    city: '深圳市',
+    start: '兰兹酒店(深圳大学桃园店)',
+    end: '深圳宝安国际机场T3航站楼国内...',
+    duration: '22.3',
+    money: '65.96'
+  }, {
+    car: '快车',
+      time: '04-12 13:38 周五',
+    city: '重庆市',
+      start: '渝富大厦-公交站',
+      end: '颐和幸福酒店(财富中心店)',
+      duration: '1.3',
+      money: '9.24'
+  }];
   printPDF(datas);
 });
 

@@ -35,7 +35,7 @@ datas.slice(12).forEach((item, index) => {
 console.log('==pages===',pages)
 gulp.task('ejs', function() {
   return gulp.src('./ejs/index.ejs')
-  .pipe(ejs({data: pages}, {}, { ext: '.html' }))
+  .pipe(ejs({data: pages, length: 6}, {}, { ext: '.html' }))
   .pipe(gulp.dest('./dist'))
   .pipe(reload({ stream:true }));
 });

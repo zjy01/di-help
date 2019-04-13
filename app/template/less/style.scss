@@ -104,7 +104,8 @@ body{
     >table{
       width: 100%;
       border-spacing: 0;
-      border: px2rem(3) solid $boderColor;
+      // border: px2rem(3) solid $boderColor;
+      box-shadow: $boderColor 0 0 0 1px;
       table-layout: fixed;
       thead{
         th{
@@ -118,21 +119,21 @@ body{
           text-indent: px2rem(-5);
           font-weight: lighter;
           position: relative;
-          &:first-child{
-            border-left: none;
-          }
-          &:after{
-            content: '';
-            display: block;
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 200%;
-            width: 200%;
-            transform-origin: 0 0;
-            transform: scale(0.47);
-            border-left: 1px solid $boderColor;
-          }
+          // &:first-child{
+          //   border-left: none;
+          // }
+          // &:after{
+          //   content: '';
+          //   display: block;
+          //   position: absolute;
+          //   top: 0;
+          //   left: 0;
+          //   height: 200%;
+          //   width: 200%;
+          //   transform-origin: 0 0;
+          //   transform: scale(0.47);
+          //   border-left: 1px solid $boderColor;
+          // }
         }
         .dline{
           text-indent: px2rem(7);

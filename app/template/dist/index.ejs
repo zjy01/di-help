@@ -12,7 +12,7 @@
     <div class="di-empty">
       <span class="ff1">-</span>
     </div>
-    <%- include('header',{ length: length, duration: duration, money: money,submitDate}); -%>
+    <%- include('header',{ length: length}); -%>
     <%- include('table', {data: data[0],start:1 }); -%>
     <div class="di-page ff2">
     页码：1/<%= data.length %>
