@@ -38,12 +38,12 @@ export default {
   },
   money: {
     rules: [{
-      required: true, message: '请输入单次大约金额', trigger: 'submit', type: 'number',
+      required: true, message: '请输入里程总金额', trigger: 'submit', type: 'number',
     }],
   },
   moneyAround:{
     rules: [{
-      required: true, message: '请输入金额偏差值', trigger: 'submit', type: 'number',
+      required: true, message: '请输入单词里程金额偏差值', trigger: 'submit', type: 'number',
     }],
   },
   city:{
@@ -53,12 +53,12 @@ export default {
   },
   startTime:{
     rules: [{
-      required: true, message: '请输入上班时间', trigger: 'submit', type: 'date',
+      required: true, message: '请输入上班时间', trigger: 'submit', type: 'object',
     }],
   },
   endTime:{
     rules: [{
-      required: true, message: '请输入下班时间', trigger: 'submit', type: 'date',
+      required: true, message: '请输入下班时间', trigger: 'submit', type: 'object',
     }],
   },
   cycle:{

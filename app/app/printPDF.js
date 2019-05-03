@@ -15,7 +15,7 @@ const timeToDate = (time) => {
   return timeToMonent(time).format('YYYY-MM-DD')
 }
 
-module.exports = function printPDF(datas){
+module.exports = function printPDF(datas, info){
   const pages = [];
   datas = datas.sort((a,b) => {
     return timeToMonent(a.time).isAfter(timeToMonent(b.time));
@@ -38,7 +38,8 @@ module.exports = function printPDF(datas){
         length: datas.length,
         duration,
         money: money.toFixed(2),
-        submitDate: moment().format('YYYY-MM-DD')
+        submitDate: info.time,
+        phone: info.phone
       }, {}, function (err, str) {
       // str => 输出绘制后的 HTML 字符串
       const htmlPath = './template/dist/index.html'

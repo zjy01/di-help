@@ -1,3 +1,4 @@
+const path = require('path');
 // Modules to control application life and create native browser window
 const { BrowserWindow } = require('electron');
 
@@ -8,21 +9,24 @@ const { BrowserWindow } = require('electron');
 function createWindow () {
   // Create the browser window.
   let mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true
-    }
+        fullscreen: true,
+      webPreferences: {
+        javascript: true,
+        plugins: true,
+        nodeIntegration: false, // 不集成 Nodejs
+        webSecurity: false,
+        preload: path.join(__dirname, '../public/renderer.js') // 但预加载的 js 文件内仍可以使用 Nodejs 的 API
+      }
   })
 
   console.log(process.env.NODE_ENV)
   // and load the index.html of the app.
-  // if(process.env.NODE_ENV === 'development'){
-  //   mainWindow.loadURL('http://localhost:3000')
-  // } else {
-  //   mainWindow.loadFile('index.html')
-  // }
-  mainWindow.loadFile('index.html')
+  if(process.env.NODE_ENV === 'development'){
+    mainWindow.loadURL('http://localhost:3000')
+  } else {
+    mainWindow.loadFile('index.html')
+  }
+  // mainWindow.loadFile('index.html')
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()

@@ -1,7 +1,7 @@
 import React from 'react';
 import memoizeOne from 'memoize-one';
 import {
-  Form, Input, Radio, Select, DatePicker, Cascader, TimePicker
+  Form, Input, Radio, Select, DatePicker, Cascader, TimePicker, InputNumber
 } from 'antd';
 
 const { RangePicker } = DatePicker;
@@ -46,6 +46,7 @@ class FormItem {
 
     [
       { name: 'Input', value: Input },
+      { name: 'InputNumber', value: InputNumber },
       { name: 'TextArea', value: TextArea },
       { name: 'RadioGroup', value: RadioGroup },
       { name: 'DatePicker', value: DatePicker },

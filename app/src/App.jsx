@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { Layout, Menu, Breadcrumb, LocaleProvider } from 'antd';
+import moment from 'moment';
 import "antd/dist/antd.css";
 import zhCN from 'antd/lib/locale-provider/zh_CN';
-
 import DiCreate from './container/DiCreate';
+
+moment.locale('zh-CN',{
+  weekdaysMin: "周日_周一_周二_周三_周四_周五_周六".split("_"),
+});
+
 
 const { Header, Content, Footer } = Layout;
 

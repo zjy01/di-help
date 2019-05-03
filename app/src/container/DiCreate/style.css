@@ -1,0 +1,19 @@
+.tc{
+    text-align: center;
+}
+.ml20{
+    margin-left: 20px;
+}
+
+.di-table .ant-input{
+    padding: 0;
+}
+.di-table .ant-input-number-input {
+    padding: 0;
+}
+.di-table .ant-calendar-picker {
+     min-width: 150px !important;
+}
+.red{
+    color: red;
+}
