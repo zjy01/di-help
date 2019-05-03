@@ -1,4 +1,5 @@
 const path = require('path');
+const url = require('url')
 // Modules to control application life and create native browser window
 const { BrowserWindow } = require('electron');
 
@@ -24,7 +25,11 @@ function createWindow () {
   if(process.env.NODE_ENV === 'development'){
     mainWindow.loadURL('http://localhost:3000')
   } else {
-    mainWindow.loadFile('index.html')
+    mainWindow.loadURL(url.format({
+      pathname: path.join(__dirname, './build/index.html'),
+      protocol: 'file:',
+      slashes: true
+    }))
   }
   // mainWindow.loadFile('index.html')
 

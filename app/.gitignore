@@ -11,3 +11,4 @@ eslint/*
 **/logs
 **/*.swp
 .vscode
+build/
