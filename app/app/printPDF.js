@@ -44,12 +44,10 @@ module.exports = function printPDF(datas, info){
         phone: info.phone
       }, {}, function (err, str) {
       // str => 输出绘制后的 HTML 字符串
-      const blob = new Blob([str], {type : 'text/html'});
-      const htmlPath = URL.createObjectURL(blob);
-      // fs.writeFileSync(htmlPath, str, 'utf-8');
+      const htmlPath = `data:text/html;charset=UTF-8,${str}`;
       const printWindow = new BrowserWindow({show: false});
       //pdfUrl是网络PDF文件的地址
-      printWindow.loadFile(htmlPath);
+      printWindow.loadURL(htmlPath);
       printWindow.webContents.on('did-finish-load', () => {
         printWindow.webContents.printToPDF({
             pageSize: 'A4',
