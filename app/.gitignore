@@ -12,3 +12,5 @@ eslint/*
 **/*.swp
 .vscode
 build/
+dist/
+out/

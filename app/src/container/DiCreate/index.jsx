@@ -42,6 +42,7 @@ export default class DiCreate extends React.Component {
     this.setState({
       tables: [...tables, ...data]
     });
+    this.toggleFormShow(false);
   }
 
   handleChange(index, prop, value) {

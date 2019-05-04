@@ -10,7 +10,7 @@ const { BrowserWindow } = require('electron');
 function createWindow () {
   // Create the browser window.
   let mainWindow = new BrowserWindow({
-        fullscreen: true,
+    simpleFullscreen:true,
       webPreferences: {
         javascript: true,
         plugins: true,
@@ -26,7 +26,7 @@ function createWindow () {
     mainWindow.loadURL('http://localhost:3000')
   } else {
     mainWindow.loadURL(url.format({
-      pathname: path.join(__dirname, './build/index.html'),
+      pathname: path.join(__dirname, '../build/index.html'),
       protocol: 'file:',
       slashes: true
     }))

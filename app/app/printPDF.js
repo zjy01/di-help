@@ -4,6 +4,7 @@ const {
   Notification
 } = require('electron');
 const ejs = require('ejs');
+const path = require('path');
 const fs = require('fs');
 const moment = require('moment');
 
@@ -33,7 +34,8 @@ module.exports = function printPDF(datas, info){
   const money = datas.reduce((acc, item) => {
     return acc + Number(item.money);
   }, 0)
-  ejs.renderFile('./template/ejs/index.ejs', {
+  
+  ejs.renderFile(path.join(__dirname, '../template/ejs/index.ejs'), {
         data: pages,
         length: datas.length,
         duration,
@@ -42,8 +44,9 @@ module.exports = function printPDF(datas, info){
         phone: info.phone
       }, {}, function (err, str) {
       // str => 输出绘制后的 HTML 字符串
-      const htmlPath = './template/dist/index.html'
-      fs.writeFileSync(htmlPath, str, 'utf-8');
+      const blob = new Blob([str], {type : 'text/html'});
+      const htmlPath = URL.createObjectURL(blob);
+      // fs.writeFileSync(htmlPath, str, 'utf-8');
       const printWindow = new BrowserWindow({show: false});
       //pdfUrl是网络PDF文件的地址
       printWindow.loadFile(htmlPath);
